@@ -6,21 +6,30 @@ RNA-seq образцы:
 Выравнивание RNA-seq чтений на геном мыши:
 https://colab.research.google.com/drive/1J_qbV2nfrhzDNL1IvLjTHkdynYDLEg-o?usp=sharing
 
-[Отчёты FastQC](/data/FastQC_Reports.md)![143770829-56c9b381-47af-48bc-b202-f6c05bcdf0d2](https://user-images.githubusercontent.com/60548614/143770849-86c152df-ea89-4853-93f1-e76ef5bc6f8f.png)
+[Отчёты FastQC](/data/FastQC_Reports.md)
 
+Статистика по каждому из 6-ти образцов
 
-Общее кол-во чтений, и кол-во, которое удалось успешно откартировать: 
-![image](https://user-images.githubusercontent.com/60548614/143770815-d9947b83-cdb9-45c2-989f-2613a558f2c8.png)
-![image](https://user-images.githubusercontent.com/60548614/143770829-56c9b381-47af-48bc-b202-f6c05bcdf0d2.png)
-
-Количество уникально-картированных чтений:![image](https://user-images.githubusercontent.com/60548614/143773136-44db945a-ab8b-4ba9-b2bd-b45fb33bbdc6.png)
-
-Количество чтений, которые не удалось приписать ни одному гену:
-![image](https://user-images.githubusercontent.com/60548614/143773222-1aa4efee-f9a8-46af-b88d-337f01abb798.png)
-
-Общее число чтений, соответствующих хотя бы одному гену:
-![image](https://user-images.githubusercontent.com/60548614/143773272-28045670-cebf-44ea-9286-afab1422086a.png)
-
+ID | Тип | Общее количество чтений | Успешно откартированные | Уникально откартированные | Чтений, попавших на ген
+-|-|-|-|-|-
+SRR3414629 | перепрограмированный | 21106089 |	20510113 (97.18%)	|	18375888 (87.06%)  | 16049609
+SRR3414630 | перепрограмированный |	15244711 | 14832680 (97.30%)	|	13186139 (86.50%) |	11465324
+SRR3414631 | перепрограмированный | 24244069 | 23547686 (97.13%) | 20928945 (86.33%) |	18408851
+SRR3414635 | контроль | 20956475 |	20395865 (97.32%)	| 18428317 (87.94%) |	16275997
+SRR3414636 | контроль | 20307147 |	19757059 (97.29%)	| 17825380 (87.78%) |	15757580
+SRR3414637 | контроль | 20385570 |	19847291 (97.36%)	| 17844858 (87.54%) |	15736978
 
 Поиск генов, которые значимо поменяли свою экспрессию в результате перепрограммирования:
 https://colab.research.google.com/drive/1XsEvLo6LpbIJqadCJgtrobu0397EnWzu?usp=sharing
+
+# DESeq2 анализ
+MA-plot
+![image](https://user-images.githubusercontent.com/60548614/143774334-cf34e2f5-fc10-4e09-87c7-7467edaf6d60.png)
+
+Тепловая карта
+![image](https://user-images.githubusercontent.com/60548614/143774310-74e5a34d-6a32-441d-807d-16daed8a7669.png)
+
+3 наиболее значимо дифференциально экспрессированных гена
+![image](https://user-images.githubusercontent.com/60548614/143774359-72e72c9f-ba58-4932-9882-89c7a555e7e9.png)
+![image](https://user-images.githubusercontent.com/60548614/143774370-a13137b3-e10a-4549-a842-49db815df83f.png)
+![image](https://user-images.githubusercontent.com/60548614/143774377-576abcc6-fe62-47c9-879b-edae753dd8fa.png)
